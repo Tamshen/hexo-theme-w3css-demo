@@ -1,0 +1,565 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ 
+
+<title>笔记本的黑苹果折腾 - TAMSHEN</title>
+<meta name="description" content="前言前段时间，一位Github的老哥@astibojr给我提交了issues，并附上了电池补丁。（在之前我也尝试过自己修改补丁，不过没效果）。后来我打了老哥的补丁发现也没效果，交流后才发现是用错补丁了….然后就这样，跟他交流学习，同时...">
+<meta name="keywords" content="Hackintosh,macOS,TAMSHEN">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="stylesheet" href="/Ts/css/w3.css">
+<link rel="stylesheet" href="/Ts/css/monokai-sublime.min.css">
+<link rel="stylesheet" href="/Ts/css/viewer.min.css">
+<script src="/Ts/js/viewer.min.js"></script>
+<link rel="stylesheet" href="/Ts/css/tamshen.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>var searchpage = 'https://tamshen.github.io/hexo-theme-w3css-demo/search/';var searchjson = 'https://tamshen.github.io/hexo-theme-w3css-demo/searchjson/index.html';</script>
+<link rel="stylesheet" href="/hexo-theme-w3css-demo/css/prism-tomorrow.css" type="text/css"></head>
+<body>
+<header class="w3-white header">
+    
+        <div class="menu">
+            <div class="bar">
+                <div class="w3-content tsw">
+                    <div class="logo"><a href="/"><img src="/Ts/img/ts.png" height="50px;" width="50px"></a></div>
+                    <div class="menubtn" onclick="menu_open()"><svg t="1554204421219" class="icon" style="width:1.8em;height:1.8em" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2695">
+                            <path d="M131.754667 202.069333m34.133333 0l682.666667 0q34.133333 0 34.133333 34.133334l0 0q0 34.133333-34.133333 34.133333l-682.666667 0q-34.133333 0-34.133333-34.133333l0 0q0-34.133333 34.133333-34.133334Z" fill="#282828" p-id="2696"/>
+                            <path d="M131.754667 483.669333m34.133333 0l682.666667 0q34.133333 0 34.133333 34.133334l0 0q0 34.133333-34.133333 34.133333l-682.666667 0q-34.133333 0-34.133333-34.133333l0 0q0-34.133333 34.133333-34.133334Z" fill="#282828" p-id="2697"/>
+                            <path d="M131.754667 765.269333m34.133333 0l682.666667 0q34.133333 0 34.133333 34.133334l0 0q0 34.133333-34.133333 34.133333l-682.666667 0q-34.133333 0-34.133333-34.133333l0 0q0-34.133333 34.133333-34.133334Z" fill="#282828" p-id="2698"/>
+                        </svg></div>
+                    <div class="menubtnoff" onclick="menu_close()"><svg t="1554205937051" class="icon" style="width:1.8em;height:1.8em" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3337">
+                            <path d="M890.88 921.6c-7.68 0-15.36-2.56-23.04-10.24L112.64 156.16c-12.8-12.8-12.8-33.28 0-43.52s33.28-12.8 43.52 0l755.2 755.2c12.8 12.8 12.8 33.28 0 43.52-5.12 7.68-12.8 10.24-20.48 10.24" fill="#282828" p-id="3338"/>
+                            <path d="M133.12 921.6c-15.36 0-30.72-12.8-30.72-30.72 0-7.68 2.56-15.36 10.24-23.04L867.84 112.64c12.8-12.8 33.28-10.24 43.52 2.56 10.24 12.8 10.24 30.72 0 43.52L156.16 911.36c-5.12 7.68-12.8 10.24-23.04 10.24" fill="#282828" p-id="3339"/>
+                        </svg></div>
+                    <div class="link menu_link">
+                        
+                            
+                            <a class="header-link" href="/" title="首页">
+                                首页</a>
+                            
+                            
+                            
+                            <a class="header-link" href="/links" title="朋友">
+                                朋友</a>
+                            
+                            
+                            
+                                <div class="w3-dropdown-hover">
+                                    <span class="header-link">学习与分享<span class="header-link-icon"></span></span>
+                                    <div class="w3-dropdown-content header-link-pan">
+                                        
+                                        <a href="/ai2" title="App Inventor 2">App Inventor 2</a>
+                                        
+                                        <a href="/software" title="常用软件下载">常用软件下载</a>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="w3-dropdown-hover">
+                                    <span class="header-link">关于<span class="header-link-icon"></span></span>
+                                    <div class="w3-dropdown-content header-link-pan">
+                                        
+                                        <a href="/about" title="关于我">关于我</a>
+                                        
+                                    </div>
+                                </div>
+                                
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+</header>
+
+<div class="w3-content tsw w3-p-b-16" id="barba-wrapper">
+    <div class="w3-row barba-container animate-main">
+
+<div class="w3-col l9 s12 ">
+    <div class="w3-white post-article">
+        <div class>
+            <div class="w3-container w3-padding-8">
+                <!-- <div class="link w3-p-y-16">
+                        <a href="https://tamshen.github.io">首页</a>
+                        <span>›</span>
+                        <a href="">
+                            
+                                <a class="category-link" href="/hexo-theme-w3css-demo/categories/Laptop/">Laptop</a>
+                                    
+                        </a>
+                        <span>›</span>
+                        <a class="c">
+                            笔记本的黑苹果折腾
+                        </a>
+                    </div> -->
+                <div class="article-title">
+                    笔记本的黑苹果折腾
+                </div>
+                <div class="article-author">
+                    <a href="https://tamshen.github.io"> 
+                        TAM SHEN
+                    </a>,
+
+                    2020-02-19 12:10:00
+                    
+                    ,
+                    <a class="category-link" href="/hexo-theme-w3css-demo/categories/Laptop/">Laptop</a>
+                    
+
+                </div>
+                <div class="line"></div>
+
+
+            </div>
+            <div class="w3-container article" id="article_viewer">
+
+
+                <p><img src="https://tvax1.sinaimg.cn/large/006bfoyggy1gc1wl4t65aj31hc0u0qv5.jpg" alt="img1"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间，一位Github的老哥 @<strong><a href="https://github.com/astibojr" target="_blank" rel="noopener">astibojr</a></strong> 给我提交了issues，并附上了电池补丁。（在之前我也尝试过自己修改补丁，不过没效果）。后来我打了老哥的补丁发现也没效果，交流后才发现是用错补丁了….然后就这样，跟他交流学习，同时一边查资料一边的把这个黑苹果一步步完善了。</p>
+<p><strong>我这个笔记本还有多个名字，然后外观，配置又差不多一样</strong></p>
+<blockquote>
+<ul>
+<li><strong>Lenovo 扬天 WEI 6 PRO</strong></li>
+<li><strong>Lenovo Thinkbook 13S</strong></li>
+<li><strong>Lenovo 扬天 S540</strong></li>
+</ul>
+</blockquote>
+<p><strong>威 6 Pro/Thinkbook 13s/扬天 S540 交流群</strong>：<a href="https://jq.qq.com/?_wv=1027&amp;k=54ugIhI" target="_blank" rel="noopener">681175557</a></p>
+<h2 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h2><table>
+<thead>
+<tr>
+<th>硬件</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主板</td>
+<td>联想 LNVNB161216</td>
+</tr>
+<tr>
+<td>处理器</td>
+<td>Intel(R) Core(TM) i7-8565U（UHD Graphics 620）</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>8GB 2400MHz Micron（必须注入内存信息）</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>HFM512GDHTNG-831（反馈S540系列有镁光硬盘，无法安装）</td>
+</tr>
+<tr>
+<td>独立显卡</td>
+<td>AMD 540X Series（已屏蔽 ）</td>
+</tr>
+<tr>
+<td>显示器</td>
+<td>FHD 1920x1080</td>
+</tr>
+<tr>
+<td>声卡</td>
+<td>ACL 257</td>
+</tr>
+<tr>
+<td>网卡</td>
+<td>Intel AC9560（使用USB网卡{我是USB网卡：<code>CF-WU810N</code>}或更换网卡）</td>
+</tr>
+<tr>
+<td>触摸板</td>
+<td>Intel I2C HID INT34BB</td>
+</tr>
+</tbody>
+</table>
+<h2 id="各项功能情况"><a href="#各项功能情况" class="headerlink" title="各项功能情况"></a>各项功能情况</h2><h4 id="存在问题："><a href="#存在问题：" class="headerlink" title="存在问题："></a>存在问题：</h4><p><strong>1.有几率出现</strong>（问题尚未定位，Windows切换到macOS最容易出现）</p>
+<ul>
+<li>卡进度条重启</li>
+<li>启动后登陆界面黑屏（外接HDMI可显示）</li>
+</ul>
+<p><strong><em>临时解决方法</em></strong>：1.长按电源键重启（使用-v等） 2.Windows系统和macOS系统来回切换 3.使用<code>configold.plist</code>配置启动。</p>
+<p><del>2.睡眠可以真正睡眠（电源键灯会呼吸闪亮）！但</del></p>
+<ul>
+<li><del>有几率唤醒不了，黑屏或直接重启！</del></li>
+<li><del>唤醒成功！卡成PPT！</del></li>
+</ul>
+<p>（2老哥给了解决方法，有待试验）</p>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✔</td>
+<td>电池</td>
+<td>正常，<a href="https://github.com/Tamshen/Lenovo-WEI6-Pro-13-IWL-Hackintosh/blob/master/README_CN.MD#可能你需要开启这些功能" target="_blank" rel="noopener">可设定电池养护模式</a></td>
+</tr>
+<tr>
+<td>✔</td>
+<td>摄像头</td>
+<td>USB定制：<code>HS07</code></td>
+</tr>
+<tr>
+<td>✔</td>
+<td>蓝牙</td>
+<td>要么无法关闭，要么无法打开，我选择了打开（测试发现，能向手机发送文件，手机发送不了文件到电脑）隔空投送无法使用！</td>
+</tr>
+<tr>
+<td>✔</td>
+<td>扬声器/麦克风</td>
+<td><code>ALC257</code>，注入ID <code>11</code> ，各项功能正常，耳机孔自动切换。（<a href="https://github.com/Tamshen/Lenovo-WEI6-Pro-13-IWL-Hackintosh/blob/master/README_CN.MD#快捷键" target="_blank" rel="noopener">有快捷键</a>）</td>
+</tr>
+<tr>
+<td>✔</td>
+<td>触摸板</td>
+<td>能力有限，只做到了<strong>轮询模式</strong>（<a href="https://github.com/alexandred/VoodooI2C/releases" target="_blank" rel="noopener">VoodooI2C、HID</a>），支持手势，支持关闭（<a href="https://github.com/Tamshen/Lenovo-WEI6-Pro-13-IWL-Hackintosh/blob/master/README_CN.MD#快捷键" target="_blank" rel="noopener">快捷键</a>），<a href="https://github.com/Tamshen/Lenovo-WEI6-Pro-13-IWL-Hackintosh/blob/master/README_CN.MD#触摸板设置教程" target="_blank" rel="noopener">需要单独设置，设置教程请点击我！</a></td>
+</tr>
+<tr>
+<td>✔</td>
+<td>HDMI</td>
+<td>外接显示正常（测试中插拔多次）</td>
+</tr>
+<tr>
+<td>✔</td>
+<td>Type-C</td>
+<td>USB定制：<code>HS03</code></td>
+</tr>
+<tr>
+<td>✔</td>
+<td>3.5mm耳机接口</td>
+<td>支持耳机插拔自动切换</td>
+</tr>
+<tr>
+<td>✔</td>
+<td>USB接口</td>
+<td>USB定制：<code>HS01</code>、<code>HS02</code></td>
+</tr>
+<tr>
+<td>✔</td>
+<td>CPU睿频</td>
+<td>通过CPU-S查询</td>
+</tr>
+<tr>
+<td>✔</td>
+<td>亮度调节</td>
+<td>快捷键<code>F11</code>和<code>F12</code>EC码是<code>Q82</code>，<code>Q83</code> ，我设置了无效，但有一个<a href="https://github.com/Tamshen/Lenovo-WEI6-Pro-13-IWL-Hackintosh/blob/master/README_CN.MD#快捷键" target="_blank" rel="noopener">快捷键</a></td>
+</tr>
+<tr>
+<td>❓❌</td>
+<td>睡眠</td>
+<td>抽风！秒睡，电源键闪白光表示已经完全睡着，会有醒不过来几率或醒来卡成PPT</td>
+</tr>
+<tr>
+<td>❌</td>
+<td>指纹模块</td>
+<td>无解，USB定制已屏蔽</td>
+</tr>
+<tr>
+<td>❌</td>
+<td>独显</td>
+<td>暂时无解，AMD可能有机会</td>
+</tr>
+<tr>
+<td>❌</td>
+<td>WIFI</td>
+<td>暂时无解，最近有大神在研究驱动，如需联网请使用USB网卡或更换网卡</td>
+</tr>
+</tbody>
+</table>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>注：在 macOS 中F1-F12和win一样，都要按Fn+按键，但不按Fn就有音量功能键和关闭触摸板键，检测键盘中按下F9和F10有反馈，但没定义操作。</p>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FN+P</td>
+<td>调节亮度-增加亮度（是的就一个增加亮度）</td>
+</tr>
+<tr>
+<td>F1</td>
+<td>调节声音-静音（对上键盘符号）</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>调节声音-减少音量（对上键盘符号）</td>
+</tr>
+<tr>
+<td>F3</td>
+<td>调节声音-增加音量（对上键盘符号）</td>
+</tr>
+<tr>
+<td>F6</td>
+<td>关闭触摸板（对上键盘符号，这个功能赞👍）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="可能你需要开启这些功能"><a href="#可能你需要开启这些功能" class="headerlink" title="可能你需要开启这些功能"></a>可能你需要开启这些功能</h3><p><strong>1.设置电池、电源模式</strong></p>
+<p>进入Windows系统打开<code>_Drive and Tools</code>，运行<code>BatterySetting_联想管家电池管理.exe</code>设置。</p>
+<blockquote>
+<p>程序来自我几个月前我自己提取的。</p>
+</blockquote>
+<p>充电模式说明：</p>
+<ul>
+<li>常规：正常充电</li>
+<li>养护：保持电量在55-60%，延长电池使用寿命</li>
+<li>快充：可快速充电，但影响电池使用寿命，不建议经常使用</li>
+</ul>
+<p>电源模式说明：</p>
+<ul>
+<li>平衡：自动调节计算机性能与耗电量</li>
+<li>高性能：有利于提高性能，但耗电量较大</li>
+<li>超省电：尽可能降低性能以延长电池使用时间</li>
+</ul>
+<p><strong>2.开启 macOS HiDPI</strong></p>
+<p><a href="https://github.com/xzhih/one-key-hidpi/blob/master/README-zh.md" target="_blank" rel="noopener">开启方法点我传送</a></p>
+<p>如果命令执行不了（报错），<code>_Drive and Tools</code>有个<code>hidpi_bak_191119.sh</code>备份，拖到终端执行即可！</p>
+<h2 id="触摸板设置教程（屏蔽苹果原装I2C驱动）"><a href="#触摸板设置教程（屏蔽苹果原装I2C驱动）" class="headerlink" title="触摸板设置教程（屏蔽苹果原装I2C驱动）"></a>触摸板设置教程（屏蔽苹果原装I2C驱动）</h2><p>1.前往驱动文件夹<code>\System\Library\Extensions\</code>中文版可能显示为<code>\系统\库\Extensions</code></p>
+<p>2.删除捣乱的两个文件（我config做了屏蔽无效）：</p>
+<ul>
+<li><strong><code>AppleIntellpssI2C.kext</code></strong></li>
+<li><strong><code>AppleIntellpssI2CController.kext</code></strong></li>
+</ul>
+<p>3.使用<code>Hackintool</code>-<code>工具（右下角右边盒子图标）</code>-<code>重建缓存并修复权限</code>即可</p>
+<p>或者 终端执行 <code>sudo kextcache -i/</code> 重建缓存</p>
+<p>4.<strong>把<code>_Drive and Tools</code>文件夹的<code>VoodooI2C_9ed8_9ed9.kext</code>放入<code>CLOVER\kexts</code>即可</strong></p>
+<table>
+<thead>
+<tr>
+<th>建议右键新窗口打开图片</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://tva2.sinaimg.cn/large/006bfoyggy1gc1wl59dh0j31hc0u0qv6.jpg" alt="1"></td>
+<td><img src="https://tva4.sinaimg.cn/large/006bfoyggy1gc1wl6ey6ej31hc0u07wh.jpg" alt="2"></td>
+<td><img src="https://tva3.sinaimg.cn/large/006bfoyggy1gc1wl6uaivj31hc0u0e82.jpg" alt="https://tva3.sinaimg.cn/large/006bfoyggy1gc1wl6uaivj31hc0u0e82.jpg"></td>
+</tr>
+<tr>
+<td><img src="https://tva4.sinaimg.cn/large/006bfoyggy1gc1wl7bug0j31hc0u0hdu.jpg" alt="4"></td>
+<td><img src="https://tvax1.sinaimg.cn/large/006bfoyggy1gc1wl7tim7j31hc0u0hdu.jpg" alt="5"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="测试截图"><a href="#测试截图" class="headerlink" title="测试截图"></a>测试截图</h2><p><img src="https://tvax1.sinaimg.cn/large/006bfoyggy1gc1wl4t65aj31hc0u0qv5.jpg" alt="1"></p>
+<p><img src="https://tvax3.sinaimg.cn/large/006bfoyggy1gc1wl3rccrj31hc0u0kjl.jpg" alt="2"></p>
+<p><img src="https://tvax4.sinaimg.cn/large/006bfoyggy1gc1wl4drwqj31hc0u0b2a.jpg" alt="3"></p>
+<table>
+<thead>
+<tr>
+<th>建议右键新窗口打开图片</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://tvax1.sinaimg.cn/large/006bfoyggy1gc1wl8f27gj3280190u0z.jpg" alt="1"></td>
+<td><img src="https://tva4.sinaimg.cn/large/006bfoyggy1gc1wl1z59hj32801904qs.jpg" alt="2"></td>
+<td><img src="https://tva3.sinaimg.cn/large/006bfoyggy1gc1wl30o3qj3280190e84.jpg" alt="https://tva3.sinaimg.cn/large/006bfoyggy1gc1wl30o3qj3280190e84.jpg"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="系统镜像下载"><a href="#系统镜像下载" class="headerlink" title="系统镜像下载"></a>系统镜像下载</h2><p><a href="https://blog.daliansky.net/macOS-Mojave-10.14.6-18G87-Release-version-with-Clover-5033-original-image.html#10146-18g87-下载链接" target="_blank" rel="noopener">黑果小兵的博客 macOS Mojave 10.14.6 镜像下载</a></p>
+
+          
+                
+
+
+
+            </div>
+            <div class="article-prev w3-container">
+                <div class="w3-row">
+                    <div class="w3-col l6">
+                        
+                        <div class="prev-box w3-margin-4">
+                            <a href="/hexo-theme-w3css-demo/computer/ren7000_Hackintosh.html" title="台式机的黑苹果折腾">
+                                <div class="prev-img" style="background-image: url(https://tvax1.sinaimg.cn/mw690/006bfoyggy1gcaw6w8ez1j31hc0u0qv6.jpg);"></div>
+                                <div class="prev-title">台式机的黑苹果折腾</div>
+                                    <div class="prev-text">上一篇</div>
+                            </a>
+                        </div> 
+                        
+                    </div>
+                    <div class="w3-col l6 ">
+                        
+                            <div class="prev-box w3-margin-4">
+                                <a href="/hexo-theme-w3css-demo/articles/Quotations.html" title="语录">
+                                    <div class="prev-img" style="background-image: url(https://tvax1.sinaimg.cn/wap800/006bfoyggy1gcb4gxamxgj318z0u0jtb.jpg);"></div>
+                                    <div class="prev-title">语录</div>
+                                        <div class="prev-text">下一篇</div>
+                                </a>
+                            </div> 
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="w3-container">
+        
+<div id="comments">
+    <div id="gitalk-container"></div>
+</div>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: 'cae2b901d1ea6011a805',
+        clientSecret: '4cbdff1c5753f0dfb5345d1e10d67405d3213bc9',
+        id: window.location.pathname,
+        repo: 'mysitecomment',
+        owner: 'tamshen',
+        admin: 'tamshen'
+    })
+    gitalk.render('gitalk-container');
+</script>
+
+
+
+    </div>
+
+
+    </div>
+</div>
+<div class="w3-col l3 w3-hide-medium w3-hide-small sidebar">
+    <div class="sidebar-item sidebar-item-t0 w3-margin">
+        <div class="sidebar-search">
+            <div class="w3-row">
+                <form action="https://tamshen.github.io/hexo-theme-w3css-demo/search/" method="get" onsubmit="return SearchGet();">
+                    <div class="w3-col" style="width:85%">
+                        <input class="w3-input w3-border" type="text" id="Searchtext" name="Searchtext">
+                    </div>
+                    <div class="w3-rest">
+                        <button class="w3-btn w3-btn-block searchbtn">
+                            <svg t="1583160858223" class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3946" width="100%" height="100%">
+                                <path d="M685.6 660.336l155.152 155.168a16 16 0 0 1 0 22.624l-11.312 11.328a16 16 0 0 1-22.624 0l-158.528-158.544a289.792 289.792 0 0 1-165.152 51.36C322.336 742.256 192 611.904 192 451.12 192 290.336 322.336 160 483.136 160c160.784 0 291.12 130.336 291.12 291.136 0 82.112-33.984 156.272-88.672 209.2z m-202.464 33.92c134.272 0 243.12-108.848 243.12-243.12C726.256 316.848 617.408 208 483.136 208 348.848 208 240 316.848 240 451.136c0 134.272 108.848 243.12 243.136 243.12z" p-id="3947" fill="#ffffff" data-spm-anchor-id="a313x.7781069.0.i0" class="selected">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="sidebar-item w3-margin" id="toc">
+        <!-- <span onclick="this.parentElement.style.display='none'" class="w3-closebtn">x</span> -->
+        <div class="sidebar-title">目录</div>
+        <div class="toc-list">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置信息"><span class="toc-text">配置信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#各项功能情况"><span class="toc-text">各项功能情况</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#存在问题："><span class="toc-text">存在问题：</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#快捷键"><span class="toc-text">快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#可能你需要开启这些功能"><span class="toc-text">可能你需要开启这些功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#触摸板设置教程（屏蔽苹果原装I2C驱动）"><span class="toc-text">触摸板设置教程（屏蔽苹果原装I2C驱动）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试截图"><span class="toc-text">测试截图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统镜像下载"><span class="toc-text">系统镜像下载</span></a></li>
+        </div>
+    </div>
+    
+    
+    <div class="sidebar-item w3-margin">
+        <div class="sidebar-title">最新文章</div>
+        <ul class="nwepost-list">
+            
+            
+            <li>
+                <a class="golink" href="/hexo-theme-w3css-demo/articles/Winter_vacation.html" title="我的寒假/新年 - 2020-02-27">
+                    我的寒假/新年
+                </a></li>
+            
+            <li>
+                <a class="golink" href="/hexo-theme-w3css-demo/computer/ren7000_Hackintosh.html" title="台式机的黑苹果折腾 - 2020-02-20">
+                    台式机的黑苹果折腾
+                </a></li>
+            
+            <li>
+                <a class="golink" href="/hexo-theme-w3css-demo/computer/laptop_Hackintosh.html" title="笔记本的黑苹果折腾 - 2020-02-19">
+                    笔记本的黑苹果折腾
+                </a></li>
+            
+        </ul>
+    </div>
+    
+    
+    <div class="sidebar-item w3-margin">
+        <div class="sidebar-title">标签</div>
+        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/hexo-theme-w3css-demo/tags/Hackintosh/">Hackintosh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-theme-w3css-demo/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-theme-w3css-demo/tags/School/">School</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-theme-w3css-demo/tags/macOS/">macOS</a></li></ul>
+    </div>
+    
+
+</div>
+
+    </div>
+</div>
+
+<footer class="w3-container w3-padding-jumbo w3-margin-top footer w3-center">
+    <div class="w3-content tsw footer-text w3-padding-16">
+        <div>Copyright © 2020<a href="https://tamshen.github.io"> TAMSHEN</a>. All Rights Reserved.</div>
+        <div>Theme by <a href="https://github.com/Tamshen/hexo-theme-w3css" target="_blank">W3CSS</a> <span style="color: #e06870;">♥</span> Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></div>
+  </div></footer>
+ 
+<div id="scrollto" onclick="gotow('html')">
+    <svg t="1583137941031" class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3854" width="100%" height="100%"><path d="M830.24 685.76l11.328-11.312a16 16 0 0 0 0-22.64L530.448 340.688a16 16 0 0 0-22.64 0L196.688 651.808a16 16 0 0 0 0 22.64l11.312 11.312a16 16 0 0 0 22.624 0l288.496-288.512L807.632 685.76a16 16 0 0 0 22.624 0z" p-id="3855" data-spm-anchor-id="a313x.7781069.0.i0" class="" fill="#7c7c7c"/></svg>
+</div>
+<script src="/Ts/js/js.js"></script>
+</body>
+<script src="/Ts/js/barba.js"></script>
+<script>
+Barba.Pjax.start();
+Barba.Prefetch.init();
+Barba.Dispatcher.on('linkClicked', function() {
+    document.getElementById("barba-wrapper").style.opacity = ".5";
+});
+Barba.Dispatcher.on('initStateChange', function() {
+    window.scrollTo(0,0); 
+});
+Barba.Dispatcher.on('transitionCompleted', function() {   
+  if(document.getElementById("comments")){
+    console.log('load comments');
+    var gitalk = new Gitalk({
+        clientID: 'cae2b901d1ea6011a805',
+        clientSecret: '4cbdff1c5753f0dfb5345d1e10d67405d3213bc9',
+        id: window.location.pathname,
+        repo: 'mysitecomment',
+        owner: 'tamshen',
+        admin: 'tamshen'
+    })
+    gitalk.render('gitalk-container');
+
+  }
+  if (document.getElementById("article_viewer")){
+    var viewer = new Viewer(document.getElementById("article_viewer"), {url: 'src',toolbar: false,navbar: false,title: false});
+  }
+  document.getElementById("barba-wrapper").style.opacity = "1";
+});
+
+Barba.Pjax.originalPreventCheck = Barba.Pjax.preventCheck;
+Barba.Pjax.preventCheck = function(evt, element) {
+  if (!Barba.Pjax.originalPreventCheck(evt, element)) {
+    return false;
+  }
+  // No need to check for element.href -
+  // originalPreventCheck does this for us! (and more!)
+  if (/.map/.test(element.href.toLowerCase())) {
+    return false;
+  }
+  if (/.search/.test(element.href.toLowerCase())) {
+    return false;
+  }
+
+
+  return true;
+};
+
+</script>
+    
+
+</html>
