@@ -69,7 +69,10 @@ a {
 * ----------
 * 文章页-格式
 * ----------*/
-
+.article a ,.article p{
+    word-wrap: break-word;
+    word-break: normal;
+}
 .article a {
     color: #4183C4;
 }
@@ -1033,7 +1036,7 @@ pre {
 }
 
 .page-links .link_list .title .t {
-    padding: 15px 0 5px 0;
+    padding: 12px 0 5px 0;
     font-size: 14px;
     font-weight: bold;
 }
@@ -1234,7 +1237,14 @@ pre {
     .footer-text {
         font-size: 12px;
     }
+    .page-links blockquote {
+        padding: 20px 20px;
+    }
+    .page-links blockquote:before,.page-links blockquote:after{
+        display: none;
+    }
 }
+
 
 @media screen and (max-width: 1250px) {
     .index-card {
