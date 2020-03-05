@@ -1,19 +1,9 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
-
-/*全局-描边动画*/
-
 * {
     -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-}
-
-/*全局-默认*/
-
-body {
-    /*background-color: rgba(240, 240, 240, 0.1);*/
 }
 
 input, textarea {
@@ -63,7 +53,7 @@ a {
     height: 30px;
     /* background-color: #888888;*/
     -webkit-box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.1);
-            box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.1);
+    box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.1);
     -o-transition: all .5s;
     transition: all .5s;
     -webkit-transition: all .5s;
@@ -79,13 +69,6 @@ a {
 * ----------
 * 文章页-格式
 * ----------*/
-
-/*
-.article h1,.article h2,.article h3{background: #F9F9F9;font-weight: bold;padding-left: 15px;border-left: 3px solid #282828;}
-.article H1,.article H4{font-size: 1.4em;}
-.article H2,.article H5{font-size: 1.2em;}
-.article H3,.article H6{font-size: 1em;}
-.article a{border-bottom: .5px dashed rgba(40, 40, 40, 0.50);}*/
 
 .article a {
     color: #4183C4;
@@ -194,7 +177,7 @@ a {
     border: 0 none;
     overflow: hidden;
     -webkit-box-sizing: content-box;
-            box-sizing: content-box;
+    box-sizing: content-box;
 }
 
 .article li p.first {
@@ -276,7 +259,7 @@ a {
 
 .article .code-tooltip {
     -webkit-box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
-            box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
+    box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
     border-top: 1px solid #eef2f2;
 }
 
@@ -566,7 +549,7 @@ kbd {
 .tag-text {
     overflow: hidden;
     -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
     margin: 3px 0 15px;
     color: rgba(23, 39, 62, 0.7);
@@ -581,16 +564,17 @@ kbd {
     margin: 15px 0 3px;
     font-size: 16px;
 }
-.tag-info{
+
+.tag-info {
     font-size: 12px;
     color: #b9b9b9;
 }
 
-
 .page-tag .w3-margin-bottom {
     margin-bottom: 20px!important;
 }
-.page-tag .w3-light-grey{
+
+.page-tag .w3-light-grey {
     background-color: rgba(241, 241, 241, 0.4)!important;
 }
 
@@ -612,10 +596,6 @@ pre {
     padding: 8px;
     font-size: 0.5em;
 }
-
-
-
-
 
 /*评论框问题*/
 
@@ -641,8 +621,6 @@ pre {
     border: 1px solid #000!important;
     padding: 8px!important;
 }
-
-
 
 /*w3css 补充*/
 
@@ -748,14 +726,14 @@ pre {
     -o-transition: all .5s ease-out;
     transition: all .5s ease-out;
     -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
 }
 
 .article-prev .prev-img:hover {
     -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .article-prev .prev-title, .article-prev .prev-text {
@@ -799,8 +777,8 @@ pre {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     width: 100%;
     -webkit-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
@@ -815,7 +793,7 @@ pre {
 .index-title {
     overflow: hidden;
     -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 24px;
     margin: 0 auto .4em;
@@ -863,8 +841,6 @@ pre {
     margin-left: -24px;
 }
 
-
-
 .footer-text {
     font-size: 13px;
     color: #8a8a8a;
@@ -876,12 +852,10 @@ pre {
 
 .post-article {
     -webkit-box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.05);
-            box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.05);
+    box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.05);
 }
 
-.sidebar {
-
-}
+.sidebar {}
 
 .sidebar-item {}
 
@@ -946,7 +920,7 @@ pre {
 .nwepost-list li {
     overflow: hidden;
     -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
     color: rgba(23, 39, 62, 0.7);
     /*padding-left: 1rem;*/
@@ -972,22 +946,22 @@ pre {
     margin: auto;
 }
 
-.page-container .post-article, .page-links ,.page-tag{
+.page-container .post-article, .page-links, .page-tag {
     margin-top: 100px;
     margin-bottom: 88px;
     -webkit-box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0);
-            box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0);
+    box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0);
 }
 
-.page-links blockquote{
+.page-links blockquote {
     margin: 0;
     padding: 30px 60px;
     background: #F9F9F9;
     position: relative;
     border-left-width: 0;
     color: #404040;
-    
 }
+
 .page-links blockquote:before {
     content: "."!important;
     font-size: 6rem;
@@ -995,8 +969,9 @@ pre {
     top: -66px;
     left: 12px;
     color: #ABABAB;
-    font-family: "SimHei",sans-serif;
+    font-family: "SimHei", sans-serif;
 }
+
 .page-links blockquote:after {
     content: '.'!important;
     font-size: 6rem;
@@ -1004,9 +979,8 @@ pre {
     top: -66px;
     right: -5px;
     color: #ABABAB;
-    font-family: "SimHei",sans-serif;
+    font-family: "SimHei", sans-serif;
 }
-
 
 .page-links-title {
     margin: 50px 0;
@@ -1064,20 +1038,19 @@ pre {
     font-weight: bold;
 }
 
+.page-links .link_list .title .d {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
-
-
-
-
-#barba-wrapper{
+#barba-wrapper {
     margin-top: 90px;
 }
 
-
-
-.header .menu{
+.header .menu {
     -webkit-box-shadow: 0px 5px 40px -1px rgba(185, 185, 185, 0.1);
-            box-shadow: 0px 5px 40px -1px rgba(185, 185, 185, 0.1);
+    box-shadow: 0px 5px 40px -1px rgba(185, 185, 185, 0.1);
     position: fixed;
     top: 0;
     right: 0;
@@ -1085,7 +1058,8 @@ pre {
     z-index: 1000;
     width: 100%;
 }
-.header .menu .bar{
+
+.header .menu .bar {
     height: 64px;
     line-height: 64px;
     background: white;
@@ -1093,7 +1067,8 @@ pre {
     transition: height .5s;
     -webkit-transition: height .5s;
 }
-.header .menu .bar .tsw{
+
+.header .menu .bar .tsw {
     position: relative;
 }
 
@@ -1105,15 +1080,16 @@ pre {
     max-width: 10em;
     text-align: left;
 }
+
 .header .menubtn, .header .menubtnoff {
     display: none;
     cursor: pointer;
 }
 
-
 .header .menu .bar .link {
     text-align: right;
 }
+
 .header .header-link {
     font-size: 13px;
     display: inline-block;
@@ -1122,12 +1098,10 @@ pre {
     color: #282828;
 }
 
-
-
 .header-link:hover .header-link-icon {
     -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .header-link-icon {
@@ -1147,7 +1121,7 @@ pre {
     min-width: 140px;
     list-style: none;
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     border-radius: 0 0 4px 4px;
     text-align: left;
 }
@@ -1155,7 +1129,7 @@ pre {
 .header-link-pan a {
     overflow: hidden;
     -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 13px;
     height: 40px;
@@ -1174,26 +1148,29 @@ pre {
     margin-top: 7px;
 }
 
-
 /*自适应*/
 
 @media screen and (max-width: 601px) {
-    .page-links .link_list .item{
+    .page-links .link_list .item {
         width: 50%;
     }
+    .footer {
+        padding: 12px!important;
+    }
 }
+
 @media screen and (max-width: 994px) {
-    .index-text{
+    .index-text {
         overflow: hidden;
         -o-text-overflow: ellipsis;
-           text-overflow: ellipsis;
+        text-overflow: ellipsis;
         white-space: nowrap;
         margin-bottom: 20px;
     }
     .header .menubtn {
         display: block;
     }
-    .header .menu .bar .link{
+    .header .menu .bar .link {
         text-align: left;
         padding-top: 64px;
         max-height: 0;
@@ -1203,36 +1180,67 @@ pre {
         background: white;
         overflow: hidden;
     }
-    .header .header-link,.header .w3-dropdown-hover{
+    .header .header-link, .header .w3-dropdown-hover {
         width: 100%;
-        display:block;
+        display: block;
     }
-    .header-link-pan{
-        display:block;
+    .header-link-pan {
+        display: block;
         position: inherit;
         -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
     }
-    .header-link-pan a{
+    .header-link-pan a {
         margin-left: 15px;
     }
-
     #barba-wrapper {
         margin-top: 80px;
     }
-    .page-links .link_list .item{
+    .page-links .link_list .item {
         border-left: 10px solid white;
         border-right: 10px solid white;
     }
-
-    
+    .header .menu .bar .logo {
+        left: 10px;
+    }
+    .viewer-button {
+        top: -40px;
+        right: -40px;
+        width: 80px;
+        height: 80px;
+    }
+    .viewer-close:before {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+    }
+    #searchresults, #searchresults .w3-hover-opacity {
+        padding: 0;
+    }
+    .tag-title {
+        margin-left: 0;
+    }
+    .index-title {
+        padding-top: 10px;
+    }
+    .index-text {
+        font-size: 12px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .index-subtitile {
+        padding-top: 5px;
+    }
+    .footer-text {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 1250px) {
-    .index-card{
+    .index-card {
         margin: 13px 10px 13px 10px;
     }
-    .index-page-next{
+    .index-page-next {
         margin-left: 0;
     }
 }
