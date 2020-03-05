@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /*全局-描边动画*/
 
 * {
@@ -60,7 +62,8 @@ a {
     width: 30px;
     height: 30px;
     /* background-color: #888888;*/
-    box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.1);
+    -webkit-box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.1);
+            box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.1);
     -o-transition: all .5s;
     transition: all .5s;
     -webkit-transition: all .5s;
@@ -190,7 +193,8 @@ a {
     background-color: #e7e7e7;
     border: 0 none;
     overflow: hidden;
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
 }
 
 .article li p.first {
@@ -271,7 +275,8 @@ a {
 }
 
 .article .code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
+            box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
     border-top: 1px solid #eef2f2;
 }
 
@@ -560,7 +565,8 @@ kbd {
 
 .tag-text {
     overflow: hidden;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     white-space: nowrap;
     margin: 3px 0 15px;
     color: rgba(23, 39, 62, 0.7);
@@ -738,12 +744,18 @@ pre {
     background-size: cover;
     color: white;
     width: 120%;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
     transition: all .5s ease-out;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
 }
 
 .article-prev .prev-img:hover {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .article-prev .prev-title, .article-prev .prev-text {
@@ -765,7 +777,6 @@ pre {
 
 .index-shadow {
     -webkit-box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.1);
-    -moz-box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.1);
     box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.1);
 }
 
@@ -787,8 +798,12 @@ pre {
 .index-img img {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 100%;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
     transition: all .5s ease-out;
 }
 
@@ -799,7 +814,8 @@ pre {
 
 .index-title {
     overflow: hidden;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 24px;
     margin: 0 auto .4em;
@@ -859,7 +875,8 @@ pre {
 }
 
 .post-article {
-    box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.05);
+    -webkit-box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.05);
+            box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0.05);
 }
 
 .sidebar {
@@ -928,7 +945,8 @@ pre {
 
 .nwepost-list li {
     overflow: hidden;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     white-space: nowrap;
     color: rgba(23, 39, 62, 0.7);
     /*padding-left: 1rem;*/
@@ -957,7 +975,8 @@ pre {
 .page-container .post-article, .page-links ,.page-tag{
     margin-top: 100px;
     margin-bottom: 88px;
-    box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0);
+    -webkit-box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0);
+            box-shadow: 0px 5px 40px -1px rgba(2, 10, 18, 0);
 }
 
 .page-links blockquote{
@@ -1025,6 +1044,7 @@ pre {
     height: 100%;
     font-size: 12px;
     background: #f7f9fa;
+    -o-transition: all .5s;
     transition: all .5s;
     -webkit-transition: all .5s;
 }
@@ -1056,7 +1076,8 @@ pre {
 
 
 .header .menu{
-    box-shadow: 0px 5px 40px -1px rgba(185, 185, 185, 0.1);
+    -webkit-box-shadow: 0px 5px 40px -1px rgba(185, 185, 185, 0.1);
+            box-shadow: 0px 5px 40px -1px rgba(185, 185, 185, 0.1);
     position: fixed;
     top: 0;
     right: 0;
@@ -1068,6 +1089,7 @@ pre {
     height: 64px;
     line-height: 64px;
     background: white;
+    -o-transition: height .5s;
     transition: height .5s;
     -webkit-transition: height .5s;
 }
@@ -1103,10 +1125,14 @@ pre {
 
 
 .header-link:hover .header-link-icon {
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 .header-link-icon {
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
     transition: all .3s ease-out;
     margin-top: 3px;
     display: inline-block;
@@ -1120,14 +1146,16 @@ pre {
     background-color: rgba(255, 255, 255, 0.95);
     min-width: 140px;
     list-style: none;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     border-radius: 0 0 4px 4px;
     text-align: left;
 }
 
 .header-link-pan a {
     overflow: hidden;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 13px;
     height: 40px;
@@ -1157,7 +1185,8 @@ pre {
 @media screen and (max-width: 994px) {
     .index-text{
         overflow: hidden;
-        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
         white-space: nowrap;
         margin-bottom: 20px;
     }
@@ -1168,6 +1197,7 @@ pre {
         text-align: left;
         padding-top: 64px;
         max-height: 0;
+        -o-transition: all .8s;
         transition: all .8s;
         -webkit-transition: all .8s;
         background: white;
@@ -1180,7 +1210,8 @@ pre {
     .header-link-pan{
         display:block;
         position: inherit;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
     }
     .header-link-pan a{
         margin-left: 15px;
